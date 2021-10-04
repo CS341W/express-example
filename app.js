@@ -1,11 +1,11 @@
 const express = require('express')
-var exphbs = require('express-handlebars')
+var hbs = require('express-handlebars')
 
 const { movies } = require('./data')
 
 const app = express()
 
-app.engine('handlebars', exphbs())
+app.engine('handlebars', hbs())
 app.set('view engine', 'handlebars')
 
 app.get('/', function (req, res) {
