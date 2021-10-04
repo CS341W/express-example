@@ -9,7 +9,8 @@ app.use(express.static(‘public’))
 app.set('view engine', 'handlebars')
 app.engine('handlebars', hbs({
   layoutsDir: `${__dirname}/views/layouts`,
-  defaultLayout: ‘index’
+  defaultLayout: ‘index’,
+  extname: 'hbs'
   }))
 
 app.get('/', (req, res) => {
