@@ -3,9 +3,9 @@ var hbs = require("express-handlebars")
 const app = express()
 const port = process.env.PORT || 3000
 const { moviedata } = require("./data")
-//const { moviedata } = require("./data")
+
 console.log(moviedata)
-//app.use(express.static("public"))
+app.use(express.static("public"))
 app.set("view engine", "hbs")
 app.engine(
   "hbs",
